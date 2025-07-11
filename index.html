@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Department of Justice – San Andreas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: #1a2a4a;
+      background: #f4f7fa;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #001c38;
+      color: white;
+      padding: 24px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+      margin: 0;
+      flex: 1 1 100%;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #ffd54f;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(to bottom right, #001c38, #003c6e);
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 720px;
+      margin: auto;
+      opacity: 0.95;
+    }
+
+    .hero button {
+      margin-top: 30px;
+      padding: 14px 28px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background-color: #ffd54f;
+      color: #00274d;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    }
+
+    .hero button:hover {
+      background-color: #ffca28;
+    }
+
+    /* Style bouton Vos droits */
+    .hero button.vos-droits {
+      margin-left: 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 28px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .hero button.vos-droits:hover {
+      background-color: #0056b3;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #00274d;
+    }
+
+    section p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      background: #001c38;
+      color: #ccc;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 10px;
+        flex-wrap: wrap;
+      }
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><i class="fa-solid fa-scale-balanced"></i> Department of Justice – San Andreas</h1>
+    <nav>
+      <a href="#missions">Missions</a>
+      <a href="login.php">Accès Magistrats</a>
+      <a href="#site">Site Officiel</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Bienvenue sur le Portail Officiel du DOJ - San Andreas</h2>
+    <p>Le Department of Justice garantit l'ordre, l'équité judiciaire et la bonne gestion des affaires publiques dans l'État de San Andreas. Ce portail vous donne accès à nos services internes et à notre communication publique.</p>
+    
+    <button onclick="window.location.href='login.php'"><i class="fa fa-lock"></i> Accès Magistrats</button>
+    <button class="vos-droits" onclick="window.location.href='vosdroits.php'">
+      <i class="fa fa-gavel"></i> Vos droits
+    </button>
+  </section>
+
+  <section id="missions">
+    <h3>Nos Missions</h3>
+    <p>Le DOJ assure l'application des lois, la supervision du système judiciaire, l’encadrement des activités réglementées et la poursuite des affaires criminelles. Nous œuvrons pour une justice équitable et impartiale.</p>
+  </section>
+
+  <section id="magistrats">
+    <h3>Espace Magistrats</h3>
+    <p>L’accès sécurisé à l’interface administrative est réservé aux magistrats du DOJ. Cet espace comprend le registre des entreprises, les outils fiscaux, les audits et les rapports internes.</p>
+    <p><strong>Connexion requise</strong> pour accéder aux outils : <a href="login.php">Connexion sécurisée</a></p>
+  </section>
+
+  <section id="site">
+    <h3>Site Internet Public</h3>
+    <p>Visitez notre site institutionnel pour découvrir les procédures RP, formulaires, lois en vigueur et actualités du DOJ :<br>
+      <a href="https://sites.google.com/view/doj-sunsetv" target="_blank" rel="noopener noreferrer">https://sites.google.com/view/doj-sunsetv</a>
+    </p>
+  </section>
+
+  <section id="contact">
+    <h3>Contact</h3>
+    <p>
+      Email administratif : <a href="mailto:contact@doj.sa">contact@doj.sa</a><br>
+      Ligne Interne DOJ : <strong>#9284</strong><br>
+      Discord officiel : <a href="https://discord.com/invite/K7T4dxUA7w" target="_blank" rel="noopener noreferrer">Lien Discord DOJ</a>
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Department of Justice – San Andreas. Tous droits réservés. | Développé par le Substitut du Procureur <strong>Eziio Mason Reed</strong>.
+  </footer>
+
+</body>
+</html>
